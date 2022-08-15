@@ -1,0 +1,30 @@
+nav{
+    padding: 15px;
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .logo{
+        height: 50px;
+        margin-right: 50px;
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--clr-black);
+        font-size: 17px;
+        font-weight: 400;
+        
+        &:after{
+            display: block;
+            content: '';
+            border-bottom: 2px solid var(--clr-white);
+            transition: 0.1s all linear;
+        }
+
+        &:hover:after{
+            border-color: var(--clr-blue);
+        }
+    }
+}

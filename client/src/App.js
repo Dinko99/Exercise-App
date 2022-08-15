@@ -1,8 +1,18 @@
-import './App.css';
+import './App.scss';
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Exercises from './pages/Exercises'
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <h1>Let's start</h1>
+    <>
+    <Navbar />
+    <Routes>
+    <Route path='/' element={< Home />} />
+    <Route path='/exercises' element={<Exercises />}/>
+    </Routes>
+    </>
   );
 }
 
