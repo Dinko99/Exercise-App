@@ -1,6 +1,4 @@
 section{
-    display: flex;
-    justify-content: space-between;
     padding: 3rem;
     position: relative;
 
@@ -73,6 +71,26 @@ section{
             top: 8vh;
             right: 3rem;
             border-radius: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 655px) {
+    p{
+        max-width: 15ch;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    section {
+        .hero-text{
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        img{
+            display: none;
         }
     }
 }
