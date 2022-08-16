@@ -4,9 +4,9 @@ import './Home.scss'
 
 const Home = () => {
   return (
-    <section>
+    <section className='home'>
       <div className="hero-text">
-        <h3>Fittness Club</h3>
+        <h3>Fitness Club</h3>
         <h1>Eat, Sleep And Repeat</h1>
         <p>Check out the most personalized exercises for you</p>
         <button>Explore Exercises</button>

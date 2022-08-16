@@ -1,4 +1,4 @@
-section{
+.home {
     padding: 3rem;
     position: relative;
 
@@ -46,7 +46,7 @@ section{
 }
 
 @media screen and (min-width: 1200px) {
-    section{
+    .home{
         padding-left: 5rem;
 
         img{
@@ -63,7 +63,7 @@ section{
 }
 
 @media screen and (max-width: 760px) {
-    section{
+    .home{
         position: relative;
 
         img{
@@ -82,7 +82,7 @@ section{
 }
 
 @media screen and (max-width: 565px) {
-    section {
+    .home {
         .hero-text{
             display: flex;
             align-items: center;

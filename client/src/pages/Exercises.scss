@@ -1,0 +1,16 @@
+.exercises {
+    margin-top: 3rem;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    h1{
+        font-size: 2rem;
+        width: 19ch;
+        text-align: center;
+        text-transform: capitalize;
+        word-spacing: 2px;
+    }
+}
