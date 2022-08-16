@@ -1,4 +1,5 @@
 import './HorizontalScrollbar.scss'
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
 
 const HorizontalScrollbar = ({data}) => {
   return (
