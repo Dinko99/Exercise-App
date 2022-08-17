@@ -1,19 +1,12 @@
-.horizontal-scrollbar{
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-top: 4rem;
-    display: flex;
-    gap: 4rem;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
         .icon-card{
+            margin-top: 4rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 5px;
             text-align: center;
+            width: 500px;
             
 
             img{
@@ -27,4 +20,3 @@
                 text-transform: capitalize;
             }
         }
-}
