@@ -3,10 +3,10 @@ import './Search.scss'
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
 
-const Search = () => {
+const Search = ({exercises, setExercises, bodyPart, setBodyPart}) => {
     const [search,setSearch] = useState('');
-    const [exercises, setExercises] = useState([]);
     const [bodyParts,setBodyParts] = useState([]);
+    
 
     useEffect(()=>{
         const fetchExercisesData = async () =>{
@@ -40,7 +40,7 @@ const Search = () => {
         onChange={(e) => setSearch(e.target.value.toLowerCase())}
          />
         <button onClick={handleSearch}>Search</button>
-        <HorizontalScrollbar data={bodyParts} />
+        <HorizontalScrollbar data={bodyParts} setBodyPart={setBodyPart} bodyPart={bodyPart} />
     </div>
     
   )
