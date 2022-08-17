@@ -3,8 +3,29 @@
     padding-right: 3rem;
     margin-top: 4rem;
     display: flex;
+    flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
 
+    .icons-container{
+        display: flex;
+        gap: 4rem;
+
+        img{
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    .body-part-title-container{
+        display: flex;
+        gap: 4rem;
+        text-align: center;
+
+        h1{
+            width: 60px;
+            font-size: 18px;
+        }
+    }
 }
