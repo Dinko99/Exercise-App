@@ -1,22 +1,57 @@
-        .icon-card{
-            margin-top: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            text-align: center;
-            width: 500px;
-            
+.horizontal-scrollbar {
+    margin-top: 3rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
 
-            img{
-                height: 60px;
-                width: 60px;
-            }
-
-            h1{
-                font-size: 18px;
-                width: 100px;
-                text-transform: capitalize;
-            }
+    .icon-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+        width: 15vw;
+        cursor: pointer;
+        transition: 0.1 all ease-in;
+        
+    
+        &:hover {
+            transform: scale(1.1);
         }
+        
+    
+        img{
+            height: 40px;
+            width: 40px;
+        }
+    
+        h1{
+            font-size: 16px;
+            width: 100px;
+            text-transform: capitalize;
+        }
+    }
+
+
+.react-horizontal-scrolling-menu--scroll-container {
+        overflow: hidden;
+    }
+
+    .arrow-left, .arrow-right {
+        position: absolute;
+        color: var(--clr-blue);
+        top: 1rem;
+        cursor: pointer;
+    }
+
+    .arrow-right{
+        right: -1rem; 
+    }
+
+    .arrow-left{
+        left: -1rem;
+    }
+
+}
