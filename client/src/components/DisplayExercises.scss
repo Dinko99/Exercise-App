@@ -1,0 +1,88 @@
+.display-exercises {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-content: center;
+  width: 80vw;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .exercise-card {
+    border-top: 2px solid var(--clr-blue);
+    margin-inline: auto;
+    transition: 0.1s all linear;
+    max-width: 230px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .info-container {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+      width: 100%;
+      justify-content: center;
+
+      button {
+        padding: 3px 10px;
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-size: 12px;
+        border: 2px solid;
+        min-width: 90px;
+      }
+
+      button:first-child {
+        background-color: var(--clr-blue);
+        color: var(--clr-white);
+        border-color: var(--clr-blue);
+      }
+
+      button:last-child {
+        border-color: var(--clr-blue);
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      color: var(--clr-black);
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: capitalize;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 866px) {
+  .display-exercises {
+    grid-template-columns: repeat(2, 1fr);
+
+    .exercise-card {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .display-exercises {
+    .exercise-card {
+      .info-container {
+        button {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

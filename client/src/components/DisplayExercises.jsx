@@ -1,9 +1,15 @@
-import React from 'react'
+import './DisplayExercises.scss';
+import { useState, useEffect } from 'react';
+import ExerciseCard from './ExerciseCard';
 
-const DisplayExercises = () => {
+const DisplayExercises = ({ exercises, setExercises, bodyPart }) => {
   return (
-    <div>DisplayExercises</div>
-  )
-}
+    <div className='display-exercises'>
+      {exercises.map((exercise, index) => {
+        return <ExerciseCard key={index} exercise={exercise} />;
+      })}
+    </div>
+  );
+};
 
-export default DisplayExercises
+export default DisplayExercises;
