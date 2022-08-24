@@ -1,0 +1,33 @@
+.pagination {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 2px;
+  font-size: 15px;
+
+  a {
+    padding: 9px 11px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.1s all linear;
+
+    &:hover {
+      background-color: var(--clr-lighter-blue);
+      border-radius: 2px;
+    }
+  }
+
+  .active {
+    background-color: var(--clr-light-blue);
+    border-radius: 2px;
+  }
+
+  .disabled {
+    color: gray;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}

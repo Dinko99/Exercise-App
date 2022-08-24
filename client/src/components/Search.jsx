@@ -3,7 +3,13 @@ import './Search.scss';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
 
-const Search = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
+const Search = ({
+  exercises,
+  setExercises,
+  bodyPart,
+  setBodyPart,
+  setItemOffset,
+}) => {
   const [search, setSearch] = useState('');
   const [bodyParts, setBodyParts] = useState([]);
 
@@ -22,6 +28,8 @@ const Search = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
 
   const handleSearch = async () => {
     if (search) {
+      await setBodyPart('');
+
       const exercisesData = await fetchData(
         'https://exercisedb.p.rapidapi.com/exercises',
         exerciseOptions
@@ -35,8 +43,9 @@ const Search = ({ exercises, setExercises, bodyPart, setBodyPart }) => {
           exercise.bodyPart.toLowerCase().includes(search)
       );
 
+      await setItemOffset(0);
       setSearch('');
-      setExercises(searchedExercises.slice(0, 12));
+      setExercises(searchedExercises);
     }
   };
 
