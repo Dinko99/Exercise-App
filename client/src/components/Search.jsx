@@ -28,7 +28,7 @@ const Search = ({
 
   const handleSearch = async () => {
     if (search) {
-      await setBodyPart('');
+      await setBodyPart('all');
 
       const exercisesData = await fetchData(
         'https://exercisedb.p.rapidapi.com/exercises',

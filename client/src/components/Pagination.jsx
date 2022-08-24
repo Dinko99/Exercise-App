@@ -13,13 +13,15 @@ const Pagination = ({
   const [pageCount, setPageCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
 
+  let page;
   const itemsPerPage = 6;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentExercises(exercises.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(exercises.length / itemsPerPage));
-    setCurrentPage(endOffset / itemsPerPage);
+    page = endOffset / itemsPerPage;
+    setCurrentPage(page);
   }, [itemOffset, itemsPerPage, exercises, bodyPart]);
 
   const handlePageClick = (e) => {
