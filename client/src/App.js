@@ -8,11 +8,10 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/exercises' element={<Exercises />} />
-        <Route path='exercise/:id' element={<ExerciseDetail />} />
+        <Route path='/exercise/:id' element={<ExerciseDetail />} />
       </Routes>
     </>
   );

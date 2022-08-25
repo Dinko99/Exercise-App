@@ -1,13 +1,13 @@
 nav {
-  padding: 15px;
-  padding-left: 4rem;
+  padding: 30px;
   display: flex;
+  gap: 100px;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
 
   .logo {
     height: 50px;
-    margin-right: 50px;
+    // position: absolute;
   }
 
   a {
@@ -25,21 +25,6 @@ nav {
 
     &:hover:after {
       border-color: var(--clr-blue);
-    }
-  }
-}
-
-@media screen and (max-width: 760px) {
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 15px;
-    padding-top: 30px;
-    gap: 200px;
-
-    .logo {
-      position: absolute;
     }
   }
 }

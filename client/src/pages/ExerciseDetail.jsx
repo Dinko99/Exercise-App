@@ -5,6 +5,7 @@ import Detail from '../components/Detail';
 import Videos from '../components/Videos';
 import SimilarExercises from '../components/SimilarExercises';
 import './ExerciseDetail.scss';
+import Navbar from '../components/Navbar';
 
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
@@ -26,11 +27,14 @@ const ExerciseDetail = () => {
   }, [id]);
 
   return (
-    <div className='exercise-detail'>
-      <Detail exerciseDetail={exerciseDetail} />
-      <Videos />
-      <SimilarExercises />
-    </div>
+    <>
+      <Navbar />
+      <div className='exercise-detail'>
+        <Detail exerciseDetail={exerciseDetail} />
+        <Videos />
+        <SimilarExercises />
+      </div>
+    </>
   );
 };
 
