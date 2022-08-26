@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { exerciseOptions, fetchData } from '../utils/fetchData';
+import { youtubeOptions, exerciseOptions, fetchData } from '../utils/fetchData';
 import Detail from '../components/Detail';
 import Videos from '../components/Videos';
 import SimilarExercises from '../components/SimilarExercises';
@@ -9,6 +9,7 @@ import Navbar from '../components/Navbar';
 
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
+  const [exerciseVideos, setExerciseVideos] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -21,6 +22,12 @@ const ExerciseDetail = () => {
         exerciseOptions
       );
       setExerciseDetail(exerciseDetailData);
+
+      const exerciseVideosData = await fetchData(
+        `${youtubeUrl}/search?query=${exerciseDetailData.name} exercise`,
+        youtubeOptions
+      );
+      setExerciseVideos(exerciseVideosData.contents);
     };
 
     fetchExercisesData();
@@ -31,7 +38,7 @@ const ExerciseDetail = () => {
       <Navbar />
       <div className='exercise-detail'>
         <Detail exerciseDetail={exerciseDetail} />
-        <Videos />
+        <Videos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
         <SimilarExercises />
       </div>
     </>
