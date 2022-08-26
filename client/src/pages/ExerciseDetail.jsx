@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar';
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
+  const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -28,6 +29,12 @@ const ExerciseDetail = () => {
         youtubeOptions
       );
       setExerciseVideos(exerciseVideosData.contents);
+
+      const targetMuscleExercisesData = await fetchData(
+        `${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`,
+        exerciseOptions
+      );
+      setTargetMuscleExercises(targetMuscleExercisesData);
     };
 
     fetchExercisesData();
@@ -39,7 +46,7 @@ const ExerciseDetail = () => {
       <div className='exercise-detail'>
         <Detail exerciseDetail={exerciseDetail} />
         <Videos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
-        <SimilarExercises />
+        <SimilarExercises targetMuscleExercises={targetMuscleExercises} />
       </div>
     </>
   );

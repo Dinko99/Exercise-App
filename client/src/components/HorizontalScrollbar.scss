@@ -41,8 +41,13 @@
   .arrow-right {
     position: absolute;
     color: var(--clr-blue);
-    top: 1rem;
+    top: 1.5rem;
     cursor: pointer;
+    transition: 0.1s all linear;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   .arrow-right {

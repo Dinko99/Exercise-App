@@ -68,6 +68,7 @@ const Search = ({
         data={bodyParts}
         setBodyPart={setBodyPart}
         bodyPart={bodyPart}
+        isBodyParts
       />
     </div>
   );

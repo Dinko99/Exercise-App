@@ -7,9 +7,10 @@ const Videos = ({ exerciseVideos, name }) => {
         Watch <span>{name}</span> exercise videos
       </h1>
       <div className='video-container'>
-        {exerciseVideos?.slice(0, 4)?.map((item) => {
+        {exerciseVideos?.slice(0, 4)?.map((item, index) => {
           return (
             <a
+              key={index}
               href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
               target='_blank'
               rel='noreferrer'

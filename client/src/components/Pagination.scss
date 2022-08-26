@@ -14,13 +14,13 @@
 
     &:hover {
       background-color: var(--clr-lighter-blue);
-      border-radius: 2px;
+      border-radius: 50%;
     }
   }
 
   .active {
     background-color: var(--clr-light-blue);
-    border-radius: 2px;
+    border-radius: 50%;
   }
 
   .disabled {

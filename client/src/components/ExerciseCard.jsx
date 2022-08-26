@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './ExerciseCard.scss';
 
 const ExerciseCard = ({ exercise }) => {
   return (

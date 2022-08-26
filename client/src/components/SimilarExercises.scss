@@ -1,0 +1,58 @@
+.similar-exercises {
+  margin-top: 3rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-weight: 200;
+    border-bottom: 2px solid var(--clr-blue);
+    padding-bottom: 10px;
+
+    span {
+      color: var(--clr-blue);
+      text-transform: capitalize;
+    }
+  }
+
+  .horizontal-scrollbar {
+    width: 90vw;
+
+    .arrow-left,
+    .arrow-right {
+      top: 3rem;
+    }
+
+    .react-horizontal-scrolling-menu--scroll-container {
+      .react-horizontal-scrolling-menu--item {
+        text-align: center;
+        img {
+          width: 30vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .similar-exercises {
+    .horizontal-scrollbar {
+      .arrow-left,
+      .arrow-right {
+        top: 7rem;
+      }
+      .react-horizontal-scrolling-menu--scroll-container {
+        display: grid;
+        grid-auto-flow: column;
+        .react-horizontal-scrolling-menu--item {
+          width: 90vw;
+
+          .info-container {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
