@@ -3,6 +3,7 @@ import './Exercises.scss';
 import { useState } from 'react';
 import DisplayExercises from '../components/DisplayExercises';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Exercises = () => {
   const [bodyPart, setBodyPart] = useState('all');
@@ -30,6 +31,7 @@ const Exercises = () => {
           setItemOffset={setItemOffset}
         />
       </section>
+      <Footer />
     </>
   );
 };

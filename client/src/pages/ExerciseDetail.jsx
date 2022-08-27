@@ -6,6 +6,7 @@ import Videos from '../components/Videos';
 import SimilarExercises from '../components/SimilarExercises';
 import './ExerciseDetail.scss';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
@@ -48,6 +49,7 @@ const ExerciseDetail = () => {
         <Videos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
         <SimilarExercises targetMuscleExercises={targetMuscleExercises} />
       </div>
+      <Footer />
     </>
   );
 };
