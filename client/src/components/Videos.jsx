@@ -1,6 +1,9 @@
 import './Videos.scss';
+import Loader from './Loader';
 
 const Videos = ({ exerciseVideos, name }) => {
+  if (!exerciseVideos.length) return <Loader />;
+
   return (
     <div className='videos'>
       <h1 className='videos-title'>

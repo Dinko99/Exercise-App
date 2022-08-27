@@ -1,5 +1,6 @@
 import './SimilarExercises.scss';
 import HorizontalScrollbar from './HorizontalScrollbar';
+import Loader from './Loader';
 
 const SimilarExercises = ({ targetMuscleExercises }) => {
   return (
@@ -10,7 +11,7 @@ const SimilarExercises = ({ targetMuscleExercises }) => {
       {targetMuscleExercises.length !== 0 ? (
         <HorizontalScrollbar data={targetMuscleExercises} />
       ) : (
-        <div>Loading...</div>
+        <Loader />
       )}
     </div>
   );

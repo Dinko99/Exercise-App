@@ -4,6 +4,7 @@ import { useState } from 'react';
 import DisplayExercises from '../components/DisplayExercises';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Loader from '../components/Loader';
 
 const Exercises = () => {
   const [bodyPart, setBodyPart] = useState('all');

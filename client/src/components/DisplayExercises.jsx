@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import ExerciseCard from './ExerciseCard';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import Pagination from './Pagination';
+import Loader from './Loader';
 
 const DisplayExercises = ({
   exercises,
